@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #f0f8ff;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: calc(12*50px);
+    height: calc(10*50px);
+    border: 2px solid #7aa7c7;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.item {
+    width: calc(100%/12);
+    height: calc(100%/10);
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+}
+
+.selected {
+    background-color: #fff;
+}
+
+.floating-button:hover {
+    background: #7aa7c7;
+    box-shadow: 0 15px 20px #6d9fc3;
+    color: white;
+    transform: translateY(-7px);
+}
+
+.modal {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 1.6rem;
+    width: max(350px, 50%);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid gray;
+}
+
+.info-button {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    transform: scale(1.2);
+}
+
+.info {
+    display: flex;
+    width: min(500px, 90vw);
+    justify-content: space-between;
+    align-content: center;
+    margin: 20px auto 0px auto;
+    font-size: 2rem;
+}
+
+.timer {
+    font-size: 2rem;
+    line-height: inherit;
+}
+
+.bombs {
+    display: flex;
+    width: 65px;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 390px) {
+    .wrapper {
+        /* margin: 5px; */
+        width: 90vw;
+        height: 80vh;
+        box-sizing: border-box;
+    }
+
+    .item {
+        width: calc(100%/10);
+        height: calc(100%/15);
+    }
+
+    .modal {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}
