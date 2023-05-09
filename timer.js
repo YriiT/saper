@@ -21,8 +21,8 @@ export function stratTimer() {
       mm += 1;
       i = 0;
     }
-
-    time = `${parseSecond(mm)}:${parseSecond(sec)}`;
+    const seconds = sec === 60 ? "00" : sec;
+    time = `${parseSecond(mm)}:${parseSecond(seconds)}`;
     const node = getTimerNode();
 
     node.innerText = time;
